@@ -8,8 +8,10 @@ import { History } from './history';
 
 
 export function activate(context: ExtensionContext) {
+    console.log('TidalCycles extension activating...');
     const config = new Config();
     const logger = new Logger(window.createOutputChannel('TidalCycles'));
+    logger.log('TidalCycles extension activated successfully!', true);
 
     const ghci = new Ghci(logger, config.useStackGhci(), config.ghciPath(), config.showGhciOutput());
     const tidal = new Tidal(logger, ghci, config.bootTidalPath(), config.useBootFileInCurrentDirectory());
@@ -37,9 +39,13 @@ export function activate(context: ExtensionContext) {
     }
 
     const evalSingleCommand = commands.registerCommand('tidal.eval', function () {
+        console.log('tidal.eval command triggered');
+        logger.log('Executing tidal.eval command', true);
         const repl = getRepl(repls, window.activeTextEditor);
         if (repl !== undefined) {
             repl.evaluate(false);
+        } else {
+            logger.log('No active text editor or repl not available', true);
         }
     });
 
@@ -58,6 +64,9 @@ export function activate(context: ExtensionContext) {
     });
 
     context.subscriptions.push(evalSingleCommand, evalMultiCommand, hushCommand);
+    
+    console.log('TidalCycles extension commands registered successfully');
+    logger.log('All TidalCycles commands registered and ready', true);
 }
 
 export function deactivate() { }

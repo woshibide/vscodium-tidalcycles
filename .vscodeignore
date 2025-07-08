@@ -11,6 +11,7 @@ vsc-extension-quickstart.md
 .eslintrc.json
 tslint.json
 node_modules/**
+!node_modules/split2/**
 npm-debug.log
 *.vsix
 .DS_Store

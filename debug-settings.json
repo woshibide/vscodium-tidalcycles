@@ -1,0 +1,9 @@
+{
+    "tidalcycles.ghciPath": "ghci",
+    "tidalcycles.showGhciOutput": true,
+    "tidalcycles.showOutputInConsoleChannel": true,
+    "tidalcycles.showEvalCount": true,
+    "files.associations": {
+        "*.tidal": "haskell"
+    }
+}
