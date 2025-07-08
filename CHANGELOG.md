@@ -1,5 +1,18 @@
 # Change Log
 
+## "1.0.2"
+- **VSCodium Compatibility**: Added support for VSCodium via Open VSX Registry
+- **Open VSX Publishing**: Added publishing configuration for Open VSX Registry
+- **Modernized Dependencies**: Updated all dependencies to latest compatible versions
+- **Enhanced Build Process**: Added automated publishing workflows for both marketplaces
+- **Improved Packaging**: Enhanced .vscodeignore and build configuration
+- **Updated Engine Requirements**: Bumped minimum VSCode version to 1.74.0 for better compatibility
+- **Added Keywords**: Enhanced discoverability with relevant keywords
+- **Repository Metadata**: Added proper repository, bugs, and homepage URLs
+
+## "1.0.1"
+- Previous version
+
 ## "1.0.0"
 - make compatible with Tidal 1.0.0
 

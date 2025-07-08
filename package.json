@@ -1,15 +1,32 @@
 {
     "name": "vscode-tidalcycles",
     "displayName": "TidalCycles for VSCode",
-    "description": "TidalCycles support in VSCode",
-    "version": "1.0.1",
+    "description": "TidalCycles support for VSCode and VSCodium - Live coding with patterns and sounds",
+    "version": "1.0.2",
     "publisher": "tidalcycles",
     "icon": "images/icon128.png",
-    "repository": "https://github.com/tidalcycles/vscode-tidalcycles",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tidalcycles/vscode-tidalcycles.git"
+    },
+    "bugs": {
+        "url": "https://github.com/tidalcycles/vscode-tidalcycles/issues"
+    },
+    "homepage": "https://github.com/tidalcycles/vscode-tidalcycles",
     "license": "GPL-3.0",
     "engines": {
-        "vscode": "^1.23.0"
+        "vscode": "^1.74.0"
     },
+    "keywords": [
+        "tidalcycles",
+        "tidal",
+        "live coding",
+        "music",
+        "patterns",
+        "haskell",
+        "supercollider",
+        "algorave"
+    ],
     "categories": [
         "Other"
     ],
@@ -109,21 +126,28 @@
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
         "watch": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+        "test": "npm run compile && node ./out/test/index.js",
+        "package": "@vscode/vsce package",
+        "publish": "@vscode/vsce publish",
+        "publish:openvsx": "ovsx publish",
+        "deploy": "npm run package && npm run publish && npm run publish:openvsx"
     },
     "devDependencies": {
-        "@types/chai": "^4.1.6",
-        "@types/mocha": "^5.2.5",
-        "@types/node": "^7.0.0",
-        "@types/split2": "^2.1.6",
-        "chai": "^4.1.2",
-        "mocha": "^5.2.0",
+        "@types/chai": "^4.3.11",
+        "@types/glob": "^8.1.0",
+        "@types/mocha": "^10.0.6",
+        "@types/node": "^20.10.0",
+        "@types/split2": "^4.2.3",
+        "@types/vscode": "^1.74.0",
+        "@vscode/vsce": "^3.2.0",
+        "chai": "^4.3.10",
+        "glob": "^10.3.0",
+        "mocha": "^10.2.0",
+        "ovsx": "^0.8.3",
         "typemoq": "^2.1.0",
-        "typescript": "^3.1.1",
-        "vscode": "^1.1.24"
+        "typescript": "^5.3.0"
     },
     "dependencies": {
-        "split2": "^3.0.0"
+        "split2": "^4.2.0"
     }
 }

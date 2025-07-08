@@ -1,7 +1,32 @@
-# TidalCycles for VSCode
+# TidalCycles for VSCode & VSCodium
 
-Support for the TidalCycles in vscode. You can learn more about
+Support for TidalCycles in VSCode and VSCodium. You can learn more about
 TidalCycles at [TidalCycles](https://tidalcycles.org).
+
+## Compatibility
+
+This extension works with:
+- **VSCode**: Available on the [Visual Studio Marketplace](https://marketplace.visualstudio.com/)
+- **VSCodium**: Available on [Open VSX Registry](https://open-vsx.org/)
+
+## Installation
+
+### VSCode
+Install from the Extensions view (`Ctrl+Shift+X`) or from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
+
+### VSCodium
+Install from the Extensions view (`Ctrl+Shift+X`) or download from [Open VSX Registry](https://open-vsx.org/). 
+
+Make sure your VSCodium is configured to use Open VSX Registry by setting:
+```json
+{
+    "extensions.gallery": {
+        "serviceUrl": "https://open-vsx.org/vscode/gallery",
+        "cacheUrl": "https://open-vsx.org/vscode/gallery",
+        "itemUrl": "https://open-vsx.org/vscode/item"
+    }
+}
+```
 
 ## Features
 
