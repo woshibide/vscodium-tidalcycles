@@ -127,9 +127,9 @@
         "compile": "tsc -p ./",
         "watch": "tsc -watch -p ./",
         "test": "npm run compile && node ./out/test/index.js",
-        "package": "@vscode/vsce package",
-        "publish": "@vscode/vsce publish",
-        "publish:openvsx": "ovsx publish",
+        "package": "npx @vscode/vsce package",
+        "publish": "npx @vscode/vsce publish",
+        "publish:openvsx": "npx ovsx publish",
         "deploy": "npm run package && npm run publish && npm run publish:openvsx"
     },
     "devDependencies": {
@@ -139,6 +139,7 @@
         "@types/node": "^20.10.0",
         "@types/split2": "^4.2.3",
         "@types/vscode": "^1.74.0",
+        "@vscode/test-electron": "^2.3.8",
         "@vscode/vsce": "^3.2.0",
         "chai": "^4.3.10",
         "glob": "^10.3.0",
