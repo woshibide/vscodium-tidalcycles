@@ -1,7 +1,6 @@
 # TidalCycles for VSCode & VSCodium
-
-Support for TidalCycles in VSCode and VSCodium. You can learn more about
-TidalCycles at [TidalCycles](https://tidalcycles.org).
+> **warning**  
+i absolutely vibe coded this port to openvsx marketplace in 3 prompts without any idea whats going on
 
 ## Compatibility
 

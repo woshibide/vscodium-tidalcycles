@@ -43,7 +43,7 @@ npm run package    # Create .vsix package
 
 1. **VSCode Marketplace**
    ```bash
-   npx vsce publish --pat YOUR_VSCODE_TOKEN
+   npx @vscode/vsce publish --pat YOUR_VSCODE_TOKEN
    ```
 
 2. **Open VSX Registry**
@@ -60,18 +60,6 @@ npm run package    # Create .vsix package
    # Publish to both
    npm run deploy
    ```
-
-### Automated Publishing
-
-The repository includes GitHub Actions workflows that automatically publish to both marketplaces when:
-- A new release is created
-- The workflow is manually triggered
-
-#### Required Secrets
-
-Add these secrets to your GitHub repository:
-- `VSCE_PAT`: Your VSCode Marketplace personal access token
-- `OVSX_PAT`: Your Open VSX Registry personal access token
 
 ## Open VSX Compatibility
 
@@ -97,8 +85,7 @@ This extension is designed to work with both VSCode and VSCodium. Key compatibil
 1. Update version in `package.json`
 2. Update `CHANGELOG.md`
 3. Commit changes
-4. Create a new release tag
-5. The GitHub Actions workflow will automatically publish to both marketplaces
+4. Manually publish using the commands above
 
 ## VSCodium Users
 

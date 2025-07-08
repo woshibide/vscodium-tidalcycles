@@ -15,10 +15,6 @@ The TidalCycles VSCode extension has been successfully updated to support both V
 - Created publishing scripts: `publish:openvsx` and `deploy`
 - Added proper package.json metadata (repository, bugs, homepage, keywords)
 
-### ✅ **GitHub Actions Workflows**
-- **CI Workflow** (`.github/workflows/ci.yml`): Tests on multiple platforms
-- **Publishing Workflow** (`.github/workflows/publish.yml`): Auto-publish to both marketplaces
-
 ### ✅ **Documentation & Compatibility**
 - Updated README with VSCodium installation instructions
 - Created `CONTRIBUTING.md` with development and publishing guide
@@ -30,7 +26,6 @@ The TidalCycles VSCode extension has been successfully updated to support both V
 ✅ **Extension packages successfully** → `vscode-tidalcycles-1.0.2.vsix` created  
 ✅ **All TypeScript compiles without errors**  
 ✅ **Open VSX CLI tools are ready**  
-✅ **GitHub Actions workflows configured**  
 
 ## Next Steps
 
@@ -45,18 +40,12 @@ The TidalCycles VSCode extension has been successfully updated to support both V
    npm run publish:openvsx -- --pat YOUR_OPENVSX_TOKEN
    ```
 
-3. **Setup automated publishing** (optional):
-   - Add `OVSX_PAT` secret to GitHub repository
-   - Add `VSCE_PAT` secret for VSCode Marketplace
-   - Future releases will auto-publish to both registries
-
 ### For Contributing Back to Original Repo:
 
 1. **Create Pull Request** with these changes
 2. **Request maintainer** to:
    - Set up Open VSX account
-   - Add publishing secrets to GitHub
-   - Create a release to trigger auto-publishing
+   - Publish the extension to Open VSX Registry
 
 ## VSCodium Users Can Now:
 
@@ -81,8 +70,16 @@ The TidalCycles VSCode extension has been successfully updated to support both V
 - `.vscodeignore` → Enhanced packaging rules
 - `README.md` → Added VSCodium compatibility info
 - `CHANGELOG.md` → Documented changes
-- `.github/workflows/` → Added CI and publishing automation
 - `CONTRIBUTING.md` → Development and publishing guide
 - `OPENVSX.md` → Open VSX specific documentation
+
+## Core Changes For Open VSX
+
+The **essential changes** for Open VSX compatibility are:
+
+1. **package.json**: Added repository metadata, keywords, and `ovsx` publishing scripts
+2. **Dependencies**: Updated to modern versions and added Open VSX CLI tools
+3. **Test Runner**: Fixed deprecated `vscode/lib/testrunner` → modern approach
+4. **Documentation**: Added VSCodium installation instructions
 
 The extension is now fully ready for VSCodium users! 🚀
